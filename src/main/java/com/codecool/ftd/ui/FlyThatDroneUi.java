@@ -43,6 +43,6 @@ public class FlyThatDroneUi {
         System.out.print("\nChoice: ");
         String choice = scanner.next();
         movementEngine.move(drone, choice.toUpperCase());
-     
+        diagonalMovement.move(drone, choice.toUpperCase());
     }
 }
