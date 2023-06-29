@@ -33,21 +33,21 @@ class MovementTest {
                 of(new Position(0, 0, 0), new Position(0, 1, 0), "RIGHT"),
 
                 // Sprint #2
-                of(new Position(1, -1, 0), new Position(0, 0, 0), "FORWARD-LEFT"),
-                of(new Position(2, -2, 0), new Position(1, -1, 0), "FORWARD-LEFT"),
-                of(new Position(0, 0, 0), new Position(-1, 1, 0), "FORWARD-LEFT"),
+                of(new Position(1, -1, 0), new Position(0, -2, 0), "FORWARD-LEFT"),
+                of(new Position(2, -2, 0), new Position(1, -3, 0), "FORWARD-LEFT"),
+                of(new Position(0, 0, 0), new Position(-1, -1, 0), "FORWARD-LEFT"),
 
-                of(new Position(1, 1, 0), new Position(0, 0, 0), "FORWARD-RIGHT"),
-                of(new Position(2, 2, 0), new Position(1, 1, 0), "FORWARD-RIGHT"),
-                of(new Position(0, 0, 0), new Position(-1, -1, 0), "FORWARD-RIGHT"),
+                of(new Position(1, 1, 0), new Position(0, 2, 0), "FORWARD-RIGHT"),
+                of(new Position(2, 2, 0), new Position(1, 3, 0), "FORWARD-RIGHT"),
+                of(new Position(0, 0, 0), new Position(-1, 1, 0), "FORWARD-RIGHT"),
 
-                of(new Position(-1, -1, 0), new Position(0, 0, 0), "BACKWARD-LEFT"),
-                of(new Position(-2, -2, 0), new Position(-1, -1, 0), "BACKWARD-LEFT"),
-                of(new Position(0, 0, 0), new Position(1, 1, 0), "BACKWARD-LEFT"),
+                of(new Position(-1, -1, 0), new Position(0, -2, 0), "BACKWARD-LEFT"),
+                of(new Position(-2, -2, 0), new Position(-1, -3, 0), "BACKWARD-LEFT"),
+                of(new Position(0, 0, 0), new Position(1, -1, 0), "BACKWARD-LEFT"),
 
-                of(new Position(-1, 1, 0), new Position(0, 0, 0), "BACKWARD-RIGHT"),
-                of(new Position(-2, 2, 0), new Position(-1, 1, 0), "BACKWARD-RIGHT"),
-                of(new Position(0, 0, 0), new Position(1, -1, 0), "BACKWARD-RIGHT"),
+                of(new Position(-1, 1, 0), new Position(0, 2, 0), "BACKWARD-RIGHT"),
+                of(new Position(-2, 2, 0), new Position(-1, 3, 0), "BACKWARD-RIGHT"),
+                of(new Position(0, 0, 0), new Position(1, 1, 0), "BACKWARD-RIGHT"),
 
                 // Sprint #3
                 of(new Position(0, 0, 1), new Position(0, 0, 0), "UP"),
