@@ -30,6 +30,6 @@ public class CombinatedlMovement {
         }
     }
     public List<String> getCommands() {
-        return List.of("FORWARD-LEFT", "FORWARD-RIGHT", "BACKWARD-LEFT", "BACKWARD-RIGHT" );
+        return List.of("FORWARD-LEFT", "FORWARD-RIGHT", "BACKWARD-LEFT", "BACKWARD-RIGHT", "UP", "DOWN" );
     }
 }
