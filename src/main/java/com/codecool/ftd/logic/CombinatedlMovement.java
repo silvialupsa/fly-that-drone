@@ -5,7 +5,7 @@ import com.codecool.ftd.data.Position;
 
 import java.util.List;
 
-public class DiagonalMovement {
+public class CombinatedlMovement {
     public void move(Drone drone, String command) {
         MovementEngine movementEngine = new MovementEngine();
         switch (command){
@@ -25,6 +25,7 @@ public class DiagonalMovement {
                 movementEngine.move(drone, "BACKWARD");
                 movementEngine.move(drone, "RIGHT");
             }
+            case "UP"->drone.setPosition(new Position(drone.getPosition().x(), drone.getPosition().y(), drone.getPosition().z()+1));
         }
     }
     public List<String> getCommands() {
