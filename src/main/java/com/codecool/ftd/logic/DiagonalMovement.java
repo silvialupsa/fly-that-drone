@@ -13,8 +13,9 @@ public class DiagonalMovement {
                 movementEngine.move(drone, "FORWARD");
                 movementEngine.move(drone, "LEFT");
             }
-            case "BACKWARD"->{
-                
+            case "FORWARD-RIGHT"->{
+                movementEngine.move(drone, "FORWARD");
+                movementEngine.move(drone, "RIGHT");
             }
             case "LEFT"->drone.setPosition(new Position(drone.getPosition().x(), drone.getPosition().y()-1, drone.getPosition().z()));
             case "RIGHT"->drone.setPosition(new Position(drone.getPosition().x(), drone.getPosition().y()+1, drone.getPosition().z()));
