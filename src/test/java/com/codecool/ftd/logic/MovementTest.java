@@ -24,13 +24,13 @@ class MovementTest {
                 of(new Position(-2, 0, 0), new Position(-1, 0, 0), "BACKWARD"),
                 of(new Position(0, 0, 0), new Position(1, 0, 0), "BACKWARD"),
 
-                of(new Position(0, -1, 0), new Position(0, 0, 0), "LEFT"),
-                of(new Position(0, -2, 0), new Position(0, -1, 0), "LEFT"),
-                of(new Position(0, 0, 0), new Position(0, 1, 0), "LEFT"),
+                of(new Position(0, -1, 0), new Position(0, -2, 0), "LEFT"),
+                of(new Position(0, -2, 0), new Position(0, -3, 0), "LEFT"),
+                of(new Position(0, 0, 0), new Position(0, -1, 0), "LEFT"),
 
-                of(new Position(0, 1, 0), new Position(0, 0, 0), "RIGHT"),
-                of(new Position(0, 2, 0), new Position(0, 1, 0), "RIGHT"),
-                of(new Position(0, 0, 0), new Position(0, -1, 0), "RIGHT"),
+                of(new Position(0, 1, 0), new Position(0, 2, 0), "RIGHT"),
+                of(new Position(0, 2, 0), new Position(0, 3, 0), "RIGHT"),
+                of(new Position(0, 0, 0), new Position(0, 1, 0), "RIGHT"),
 
                 // Sprint #2
                 of(new Position(1, -1, 0), new Position(0, 0, 0), "FORWARD-LEFT"),

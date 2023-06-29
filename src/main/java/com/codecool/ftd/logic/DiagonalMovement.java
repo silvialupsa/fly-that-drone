@@ -5,12 +5,17 @@ import com.codecool.ftd.data.Position;
 
 import java.util.List;
 
-public class MovementEngine {
-
+public class DiagonalMovement {
     public void move(Drone drone, String command) {
+        MovementEngine movementEngine = new MovementEngine();
         switch (command){
-            case "FORWARD"->drone.setPosition(new Position(drone.getPosition().x()-1, drone.getPosition().y(), drone.getPosition().z()));
-            case "BACKWARD"->drone.setPosition(new Position(drone.getPosition().x()+1, drone.getPosition().y(), drone.getPosition().z()));
+            case "FORWARD-LEFT"->{
+                movementEngine.move(drone, "FORWARD");
+                movementEngine.move(drone, "LEFT");
+            }
+            case "BACKWARD"->{
+                
+            }
             case "LEFT"->drone.setPosition(new Position(drone.getPosition().x(), drone.getPosition().y()-1, drone.getPosition().z()));
             case "RIGHT"->drone.setPosition(new Position(drone.getPosition().x(), drone.getPosition().y()+1, drone.getPosition().z()));
         }
