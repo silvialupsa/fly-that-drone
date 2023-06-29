@@ -39,6 +39,6 @@ public class FlyThatDroneUi {
     private void handleChoice() {
         System.out.print("\nChoice: ");
         String choice = scanner.next();
-        movementEngine.move(drone, choice);
+        movementEngine.move(drone, choice.toUpperCase());
     }
 }

@@ -10,6 +10,8 @@ public class MovementEngine {
     public void move(Drone drone, String command) {
         switch (command){
             case "FORWARD": drone.setPosition(new Position(drone.getPosition().x()-1, drone.getPosition().y(), drone.getPosition().z()));
+            case "BACKWARD": drone.setPosition(new Position(drone.getPosition().x()+1, drone.getPosition().y(), drone.getPosition().z()));
+            
         }
 
     }
