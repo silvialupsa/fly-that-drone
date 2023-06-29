@@ -26,6 +26,7 @@ public class CombinatedlMovement {
                 movementEngine.move(drone, "RIGHT");
             }
             case "UP"->drone.setPosition(new Position(drone.getPosition().x(), drone.getPosition().y(), drone.getPosition().z()+1));
+            case "DOWN"->drone.setPosition(new Position(drone.getPosition().x(), drone.getPosition().y(), drone.getPosition().z()-1));
         }
     }
     public List<String> getCommands() {
