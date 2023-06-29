@@ -1,6 +1,7 @@
 package com.codecool.ftd.ui;
 
 import com.codecool.ftd.data.Drone;
+import com.codecool.ftd.logic.DiagonalMovement;
 import com.codecool.ftd.logic.MovementEngine;
 
 import java.util.Scanner;
@@ -10,11 +11,13 @@ import static java.util.stream.Collectors.joining;
 public class FlyThatDroneUi {
     private final Drone drone;
     private final MovementEngine movementEngine;
+    private final DiagonalMovement diagonalMovement;
     private final Scanner scanner;
 
-    public FlyThatDroneUi(Drone drone, MovementEngine movementEngine, Scanner scanner) {
+    public FlyThatDroneUi(Drone drone, MovementEngine movementEngine, DiagonalMovement diagonalMovement, Scanner scanner) {
         this.drone = drone;
         this.movementEngine = movementEngine;
+        this.diagonalMovement = diagonalMovement;
         this.scanner = scanner;
     }
 
@@ -33,12 +36,13 @@ public class FlyThatDroneUi {
 
     private String getMovementNames() {
         return movementEngine.getCommands().stream()
-                .collect(joining(", "));
+                .collect(joining(", ")).concat(", "+ diagonalMovement.getCommands().stream().collect(joining(", ")));
     }
 
     private void handleChoice() {
         System.out.print("\nChoice: ");
         String choice = scanner.next();
         movementEngine.move(drone, choice.toUpperCase());
+     
     }
 }

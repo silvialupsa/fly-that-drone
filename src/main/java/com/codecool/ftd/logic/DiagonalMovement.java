@@ -21,10 +21,13 @@ public class DiagonalMovement {
                 movementEngine.move(drone, "BACKWARD");
                 movementEngine.move(drone, "LEFT");
             }
-            case "RIGHT"->drone.setPosition(new Position(drone.getPosition().x(), drone.getPosition().y()+1, drone.getPosition().z()));
+            case "BACKWARD-RIGHT"->{
+                movementEngine.move(drone, "BACKWARD");
+                movementEngine.move(drone, "RIGHT");
+            }
         }
     }
     public List<String> getCommands() {
-        return List.of("FORWARD", "BACKWARD", "LEFT", "RIGHT" );
+        return List.of("FORWARD-LEFT", "FORWARD-RIGHT", "BACKWARD-LEFT", "BACKWARD-RIGHT" );
     }
 }
